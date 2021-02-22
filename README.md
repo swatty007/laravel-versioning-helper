@@ -9,7 +9,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/swatty007/laravel-versioning-helper.svg?style=flat-square)](https://scrutinizer-ci.com/g/swatty007/laravel-versioning-helper)
 [![Total Downloads](https://img.shields.io/packagist/dt/swatty007/laravel-versioning-helper.svg?style=flat-square)](https://packagist.org/packages/swatty007/laravel-versioning-helper)
 
-The versioning helper packages bundles a small set of helper functions & blade components,
+The versioning helper package bundles a small set of helper functions & blade components,
 to make updating & rendering your applications version & build number an ease.
 
 Its aims at helping you to keep your applications version number up to date
