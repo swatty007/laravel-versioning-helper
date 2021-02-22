@@ -39,7 +39,10 @@ class BladeComponentTest extends ComponentTestCase
 HTML;
         $compiled = $this->rendered(ApplicationName::class);
 
-        $this->assertSame($expected, $compiled);
+        $this->assertSame(
+            preg_replace('/\s+/', '', $expected),
+            preg_replace('/\s+/', '', $compiled)
+        );
     }
 
     /** @test */
@@ -82,7 +85,10 @@ HTML;
 HTML;
         $compiled = $this->rendered(BuildString::class);
 
-        $this->assertSame($expected, $compiled);
+        $this->assertSame(
+            preg_replace('/\s+/', '', $expected),
+            preg_replace('/\s+/', '', $compiled)
+        );
     }
 
     /** @test */
@@ -105,7 +111,10 @@ HTML;
 HTML;
         $compiled = $this->rendered(Copyright::class);
 
-        $this->assertSame($expected, $compiled);
+        $this->assertSame(
+            preg_replace('/\s+/', '', $expected),
+            preg_replace('/\s+/', '', $compiled)
+        );
     }
 
     /** @test */
@@ -136,6 +145,9 @@ HTML;
 HTML;
         $compiled = $this->rendered(Version::class);
 
-        $this->assertSame($expected, $compiled);
+        $this->assertSame(
+            preg_replace('/\s+/', '', $expected),
+            preg_replace('/\s+/', '', $compiled)
+        );
     }
 }
