@@ -34,6 +34,12 @@ class Copyright extends Component
      * @var string
      */
     public string $endDate;
+    /**
+     * Defines the date string for our copyright notice
+     *
+     * @var string
+     */
+    public string $dates;
 
     /**
      * Create a new component instance.
@@ -49,6 +55,12 @@ class Copyright extends Component
         $this->authorURL = $url  ?? config('laravel-versioning-helper.author_url');
         $this->startDate = $startDate ?? config('laravel-versioning-helper.creation_date');
         $this->endDate = $endDate ?? date('Y');
+
+        if (config('laravel-versioning-helper.show_current_date')) {
+            $this->dates = "$this->startDate - $this->endDate";
+        } else {
+            $this->dates = $this->endDate;
+        }
     }
 
     /**

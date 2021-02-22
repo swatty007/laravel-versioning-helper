@@ -34,7 +34,7 @@ It contains some optional configuration parameters and is fully documented.
 ## Usage
 Simply add the following component to the desired location of your view:
 ```php
-<x-versioning-helper::build-string></x-versioning-helper::build-string>
+<x-versioning-helper-build-string></x-versioning-helper-build-string>
 ```
 to display the full versioning information of your application, containing:
 - Application Name
@@ -44,9 +44,9 @@ to display the full versioning information of your application, containing:
  ![Package Banner](./docs/blade-view.PNG "Package Banner")
   
 Alternatively you can also the following components separately, to display only a part of those information:
-- x-versioning-helper::application-name
-- x-versioning-helper::copyright
-- x-versioning-helper::version
+- x-versioning-helper-application-name
+- x-versioning-helper-copyright
+- x-versioning-helper-version
 
 You can simply specify the current version of your application through our config file,
 or through a user definable Cache variable, which can be set/updated via our fully documented versioning artisan command.

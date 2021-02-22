@@ -5,6 +5,7 @@ namespace Swatty007\LaravelVersioningHelper\Tests;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\View;
 use Swatty007\LaravelVersioningHelper\LaravelVersioningHelperServiceProvider;
 use Swatty007\LaravelVersioningHelper\Views\Components\ApplicationName;
@@ -107,6 +108,24 @@ HTML;
         $expected = <<<HTML
 <span>
     &copy;  - 2021 <a href="" target="_blank" class="text-primary dim no-underline">Developed with ❤</a>
+</span>
+HTML;
+        $compiled = $this->rendered(Copyright::class);
+
+        $this->assertSame(
+            preg_replace('/\s+/', '', $expected),
+            preg_replace('/\s+/', '', $compiled)
+        );
+    }
+
+    /** @test */
+    public function copyright_start_date_is_optional()
+    {
+        Config::set('laravel-versioning-helper.show_current_date', false);
+
+        $expected = <<<HTML
+<span>
+    &copy; 2021 <a href="" target="_blank" class="text-primary dim no-underline">Developed with ❤</a>
 </span>
 HTML;
         $compiled = $this->rendered(Copyright::class);
