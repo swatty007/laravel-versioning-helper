@@ -17,7 +17,8 @@
         {
             "name": "Martin Niehoff",
             "email": "info@martin-niehoff.de",
-            "role": "Developer"
+            "role": "Developer",
+            "homepage": "https://martin-niehoff.de"
         }
     ],
     "require": {

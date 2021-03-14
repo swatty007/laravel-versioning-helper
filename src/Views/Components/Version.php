@@ -59,6 +59,9 @@ class Version extends Component
         if (!App::environment('production')) {
             $this->runtime = Cache::pull(config('laravel-versioning-helper.runtime_key')) ?? 'PHP v' . PHP_VERSION;
             $this->build .= " $this->runtime";
+        } else {
+            $this->runtime = '';
+            $this->build = '';
         }
     }
 
