@@ -38,20 +38,20 @@ class VersioningHelper extends Command
     protected $description = 'Helper Command to set your applications version.';
 
     /**
-     * Current Version
-     *
+     * Current Version.
      */
     public SemVer\Version $version;
 
     /**
-     * Defines the modification date of our current revision
+     * Defines the modification date of our current revision.
      *
      * @var Carbon
      */
     public Carbon $modificationDate;
 
     /**
-     * Defines the current PHP runtime at which our application runs
+     * Defines the current PHP runtime at which our application runs.
+     *
      * @var string
      */
     public string $runtime;
@@ -69,8 +69,9 @@ class VersioningHelper extends Command
     /**
      * Execute the console command.
      *
-     * @return int
      * @throws SemVer\Exceptions\InvalidVersionException
+     *
+     * @return int
      */
     public function handle(): int
     {
@@ -83,8 +84,8 @@ class VersioningHelper extends Command
 
         $this->applyOptions();
 
-        $this->info("Current Version: " . $currentVersion);
-        $this->line("New Version: " . $this->version);
+        $this->info('Current Version: '.$currentVersion);
+        $this->line('New Version: '.$this->version);
 
         $this->parseBuild();
 
@@ -94,8 +95,7 @@ class VersioningHelper extends Command
     }
 
     /**
-     * Helper Method to apply our Commands Options
-     *
+     * Helper Method to apply our Commands Options.
      */
     private function applyOptions()
     {
@@ -129,8 +129,7 @@ class VersioningHelper extends Command
     }
 
     /**
-     * Helper Method to assemble a version string based on our used repository system
-     *
+     * Helper Method to assemble a version string based on our used repository system.
      */
     private function parseBuild()
     {
@@ -173,12 +172,12 @@ class VersioningHelper extends Command
         }
 
         if (!App::environment('production')) {
-            $this->runtime = 'PHP v' . PHP_VERSION;
+            $this->runtime = 'PHP v'.PHP_VERSION;
         }
     }
 
     /**
-     * Helper Method to save our applications version within the system
+     * Helper Method to save our applications version within the system.
      */
     private function saveVersion()
     {

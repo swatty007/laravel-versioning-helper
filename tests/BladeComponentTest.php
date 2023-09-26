@@ -33,7 +33,7 @@ class BladeComponentTest extends ComponentTestCase
     /** @test */
     public function application_name_does_render()
     {
-        $expected = <<<HTML
+        $expected = <<<'HTML'
 <span>
     <a href="http://localhost" target="_self" class="text-primary dim no-underline">Laravel</a>
 </span>
@@ -155,7 +155,7 @@ HTML;
     {
         $date = Carbon::now();
         $dateString = $date->format('d/m/y H:i');
-        $phpVersion = 'PHP v' . PHP_VERSION;
+        $phpVersion = 'PHP v'.PHP_VERSION;
 
         Cache::put('laravel-versioning-helper.version', '0.0.1');
         Cache::put('laravel-versioning-helper.modificationDate', $date);
