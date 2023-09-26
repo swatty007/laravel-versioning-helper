@@ -8,34 +8,34 @@ use Illuminate\View\Component;
 class Copyright extends Component
 {
     /**
-     * Defines the applications author/company/vendor what ever it is ;)
+     * Defines the applications author/company/vendor what ever it is ;).
      *
      * @var string
      */
     public string $author;
 
     /**
-     * Supplies a link to our authors website
+     * Supplies a link to our authors website.
      *
      * @var string
      */
     public string $authorURL;
 
     /**
-     * Defines the "start" date for our copyright notice
+     * Defines the "start" date for our copyright notice.
      *
      * @var string
      */
     public string $startDate;
 
     /**
-     * Defines the "end" date for our copyright notice
+     * Defines the "end" date for our copyright notice.
      *
      * @var string
      */
     public string $endDate;
     /**
-     * Defines the date string for our copyright notice
+     * Defines the date string for our copyright notice.
      *
      * @var string
      */
@@ -52,7 +52,7 @@ class Copyright extends Component
     public function __construct($author = null, $url = null, $startDate = null, $endDate = null)
     {
         $this->author = $author ?? config('laravel-versioning-helper.author');
-        $this->authorURL = $url  ?? config('laravel-versioning-helper.author_url');
+        $this->authorURL = $url ?? config('laravel-versioning-helper.author_url');
         $this->startDate = $startDate ?? config('laravel-versioning-helper.creation_date');
         $this->endDate = $endDate ?? date('Y');
 

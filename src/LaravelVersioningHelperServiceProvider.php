@@ -33,16 +33,16 @@ class LaravelVersioningHelperServiceProvider extends ServiceProvider
 
             // Registering package commands.
             $this->commands([
-                VersioningHelper::class
+                VersioningHelper::class,
             ]);
         }
 
         $this->loadViewComponentsAs('versioning-helper', [
-           ApplicationName::class,
-           BuildString::class,
-           Copyright::class,
-           Version::class
-       ]);
+            ApplicationName::class,
+            BuildString::class,
+            Copyright::class,
+            Version::class,
+        ]);
     }
 
     /**

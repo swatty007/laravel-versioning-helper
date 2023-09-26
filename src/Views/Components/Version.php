@@ -13,36 +13,39 @@ use Illuminate\View\Component;
 class Version extends Component
 {
     /**
-     * Defines the modification date of our current revision
+     * Defines the modification date of our current revision.
      *
      * @var Carbon
      */
     public Carbon $modificationDate;
 
     /**
-     * Defines the current version of our application
+     * Defines the current version of our application.
+     *
      * @var string
      */
     public string $version;
 
     /**
-     * Defines the current PHP runtime at which our application runs
+     * Defines the current PHP runtime at which our application runs.
+     *
      * @var string
      */
     public string $runtime;
 
     /**
-     * Defines the URL which contains our applications changelog
+     * Defines the URL which contains our applications changelog.
+     *
      * @var string|Application|UrlGenerator
      */
     public string $changelogURL;
 
     /**
-     * Defines the full Version String of our build, its version number including our revision & runtime
+     * Defines the full Version String of our build, its version number including our revision & runtime.
+     *
      * @var string
      */
     public string $build;
-
 
     /**
      * Create a new component instance.
@@ -57,7 +60,7 @@ class Version extends Component
 
         $this->build = sprintf('v%s (%s)', $this->version, $this->modificationDate->format('d/m/y H:i'));
         if (!App::environment('production')) {
-            $this->runtime = Cache::pull(config('laravel-versioning-helper.runtime_key')) ?? 'PHP v' . PHP_VERSION;
+            $this->runtime = Cache::pull(config('laravel-versioning-helper.runtime_key')) ?? 'PHP v'.PHP_VERSION;
             $this->build .= " $this->runtime";
         } else {
             $this->runtime = '';
