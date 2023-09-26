@@ -60,6 +60,7 @@ HTML;
     public function build_string_does_render()
     {
         $date = Carbon::now()->format('d/m/y H:i');
+        $year = Carbon::now()->year;
         $phpVersion = PHP_VERSION;
 
         $expected = <<<HTML
@@ -73,7 +74,7 @@ HTML;
 
         <span class="px-1">&middot;</span>
         <span>
-    &copy;  - 2021 <a href="" target="_blank" class="text-primary dim no-underline">Developed with ❤</a>
+    &copy;  - $year <a href="" target="_blank" class="text-primary dim no-underline">Developed with ❤</a>
 </span>
 
         <span class="px-1">&middot;</span>
@@ -105,9 +106,11 @@ HTML;
     /** @test */
     public function copyright_does_render()
     {
+        $year = Carbon::now()->year;
+
         $expected = <<<HTML
 <span>
-    &copy;  - 2021 <a href="" target="_blank" class="text-primary dim no-underline">Developed with ❤</a>
+    &copy;  - $year <a href="" target="_blank" class="text-primary dim no-underline">Developed with ❤</a>
 </span>
 HTML;
         $compiled = $this->rendered(Copyright::class);
@@ -121,11 +124,12 @@ HTML;
     /** @test */
     public function copyright_start_date_is_optional()
     {
+        $year = Carbon::now()->year;
         Config::set('laravel-versioning-helper.show_current_date', false);
 
         $expected = <<<HTML
 <span>
-    &copy; 2021 <a href="" target="_blank" class="text-primary dim no-underline">Developed with ❤</a>
+    &copy; $year <a href="" target="_blank" class="text-primary dim no-underline">Developed with ❤</a>
 </span>
 HTML;
         $compiled = $this->rendered(Copyright::class);
