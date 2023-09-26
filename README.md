@@ -4,8 +4,8 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/swatty007/laravel-versioning-helper.svg?style=flat-square)](https://packagist.org/packages/swatty007/laravel-versioning-helper)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Build Status](https://github.com/swatty007/laravel-versioning-helper/actions/workflows/run-tests.yaml/badge.svg)](https://www.travis-ci.com/swatty007/laravel-versioning-helper)
-[![Code Style](https://github.com/swatty007/laravel-versioning-helper/actions/workflows/check-coding-standards.yaml/badge.svg)](https://github.styleci.io/repos/340988427?branch=main)
+[![Build Status](https://github.com/swatty007/laravel-versioning-helper/actions/workflows/run-tests.yaml/badge.svg)](https://github.com/swatty007/laravel-versioning-helper/actions/workflows/run-tests.yaml)
+[![Code Style](https://github.com/swatty007/laravel-versioning-helper/actions/workflows/check-coding-standards.yaml/badge.svg)](https://github.com/swatty007/laravel-versioning-helper/actions/workflows/check-coding-standards.yaml)
 [![Quality Score](https://img.shields.io/scrutinizer/g/swatty007/laravel-versioning-helper.svg?style=flat-square)](https://scrutinizer-ci.com/g/swatty007/laravel-versioning-helper)
 [![Total Downloads](https://img.shields.io/packagist/dt/swatty007/laravel-versioning-helper.svg?style=flat-square)](https://packagist.org/packages/swatty007/laravel-versioning-helper)
 
