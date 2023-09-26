@@ -8,14 +8,14 @@ use Illuminate\View\Component;
 class ApplicationName extends Component
 {
     /**
-     * Defines the applications url
+     * Defines the applications url.
      *
      * @var string
      */
     public string $url;
 
     /**
-     * Defines the applications name
+     * Defines the applications name.
      *
      * @var string
      */
@@ -27,7 +27,7 @@ class ApplicationName extends Component
      * @param null $url
      * @param null $name
      */
-    public function __construct($url=null, $name = null)
+    public function __construct($url = null, $name = null)
     {
         $this->url = $url ?? config('app.url');
         $this->name = $name ?? config('app.name');
