@@ -65,7 +65,7 @@ HTML;
 
         $expected = <<<HTML
 <div>
-    <p class="text-center text-xs text-80">
+    <p id="versioning-helper" class="text-center text-xs text-80">
 
         <span>
     <a href="http://localhost" target="_self" class="text-primary dim no-underline">Laravel</a>
