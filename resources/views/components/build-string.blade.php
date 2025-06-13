@@ -1,5 +1,5 @@
 <div>
-    <p {{ $attributes->merge(['class' => 'text-center text-xs text-80']) }}>
+    <p id="versioning-helper" {{ $attributes->merge(['class' => 'text-center text-xs text-80']) }}>
 
         <x-versioning-helper-application-name :linkClasses="$linkClasses"></x-versioning-helper-application-name>
 
