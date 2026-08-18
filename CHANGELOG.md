@@ -28,4 +28,8 @@ All notable changes to `laravel-versioning-helper` will be documented in this fi
 - Updated dependencies to support Laravel 11
 - Added default id to our standard frontend component
 
+## 4.0.0 - 2026-08-18 | Laravel 12 Support
+
+- Updated dependencies to support Laravel 12
+
 
